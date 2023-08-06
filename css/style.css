@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --vermelho-principal: #dc0000;
+    --vermelho-secundario: #dc0404;
+    --preto: #000;
+    --branco: #fff;
+    --poppins: "Poppins",sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#app{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+body {
+    font-family: var(--poppins);
+    background-color: whitesmoke;
+}
+header{
+    padding: 0.5rem 2rem;
+    /* background: var(--vermelho-principal); */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    position: fixed;
+}
+
+.header_background {
+    transition: all .2s ease-out;
+    width: 100vw;
+    height: 0;
+    position: absolute;
+    background-color: var(--vermelho-principal);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header.active > .header_background {
+    height: 100%;
+}
+
+.logo{
+    width:8.5%;
+    height:8.5%;
+}
+.menu {
+    display: flex;
+    gap:10px;
+}
+
+header.active > nav > .menu_item
+{
+    color: var(--branco);
+}
+
+.menu_item{
+    text-decoration: none;
+    color: var(--vermelho-principal);
+    font-size: 20px;
+    font-weight: medium;
+    transition: 0.3s;
+    margin: 0 20px;
+    position: relative;
+}
+
+.active > nav > .menu_item::after{
+    background-color: var(--branco);
+}
+
+.menu_item::after
+{
+    border-radius: 10px;
+    transition: all .2s ease-out;
+    content: '';
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--vermelho-principal);
+    position: absolute;
+    z-index: 999;
+}
+.menu_item:hover::after {
+    width: 110%;
+}
+
+
+/* Principal */
+
+.principal {
+
+    height: 100vh;
+    padding: 1rem 1.5rem;;
+    margin-top: 30vh;
+    /* margin: 0 auto; */
+    font-size: 24px;
+    font-weight: bold;
+}
+.cabecalho_principal {
+    padding: 1rem 0;
+}
+.btn_principal {
+    margin-top: 1rem;
+    width: 10%;
+    padding: 0.5rem 0;
+    background: var(--vermelho-secundario);
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.btn_principal:hover {
+    background: #fc2727;  
+}
+.pessoas {
+    height: 20vh;
+    display:flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+.pessoas_conteudo {
+    margin: 0 2rem;
+}
+
+/* Equipe */
+
+.titulo_secundario {
+    text-align: center;
+}
+
+.trio.active{
+    bottom: 0;
+}
+
+
+.trio {
+    bottom: -100%;
+    width: 40%;
+    position: fixed;
+    right: 20px;
+    transition: all .3s ease-in-out;
+    height: 400px;
+}
+
+.membro{
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    filter: grayscale(30) brightness(0.5);
+    transition: all .3s ease-out;
+    transform: scale(1);
+    overflow: visible;
+    transform: translateX(-50%);
+}
+
+.nome_membro {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    font-size: 3rem;
+    font-family:var(--poppins);
+}
+
+.membro:hover{
+    filter: grayscale(0) brightness(1);
+    cursor: pointer;
+    transform: scale(1.2) translateX(-50%);
+    z-index: 3;
+}
+
+.caio {
+    right: -15%;
+}
+
+.lorena{
+    left: 25%;
+}
+
+.marcos {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lorena, .caio {
+    z-index: 2;
+}
+
+.marcos {
+    z-index: 1;
+}
+
+
+@keyframes show {
+
+    0%{
+        bottom: -100%;
+        filter: blur(10px);
+    }
+
+    80%{
+        filter: blur(1px);
+        bottom: 0;
+    }
+
+    100% {
+        
+        filter: blur(0px);
+    }
+}
