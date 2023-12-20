@@ -198,6 +198,29 @@ header.active > nav > .menu_item
     z-index: 1;
 }
 
+.equipe__conteudo {
+    display:flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.equipe_imagem{
+    border-radius: 5px;
+    margin: 0.5rem 1rem;
+}
+
+/*Rodapé*/
+
+
+.rodape {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.rodape__redes__sociais{
+    
+}
+
 
 @keyframes show {
 

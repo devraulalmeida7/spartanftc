@@ -12,7 +12,11 @@ app.addEventListener('scroll', () => {
     document.querySelector('.trio').classList.add("active")
 })
 
+
+//Aparecer nome dos membros
 const membros =  document.querySelectorAll('.membro');
+
+// Ação de aparecer os nomes dos membros quando o mouse passar por cima
 membros.forEach(membro => {
     membro.addEventListener('mouseover', () => {
         write(document.querySelector('.nome_membro'), membro.getAttribute('class').replace('membro', '').toUpperCase())
@@ -23,9 +27,10 @@ membros.forEach(membro => {
     })
 })
 
+/* Criar texto em cima dos membros da equipe */
 
-let status = 0
 function write (elem, txt) {
+    let status = 0
     setTimeout( () => {
 
         const len = txt.length;
