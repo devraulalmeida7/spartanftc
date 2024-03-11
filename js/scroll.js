@@ -18,7 +18,7 @@ const membros =  document.querySelectorAll('.membro');
 
 // Ação de aparecer os nomes dos membros quando o mouse passar por cima
 membros.forEach(membro => {
-    membro.addEventListener('mouseover', () => {
+    membro.addEventListener('click', () => {
         write(document.querySelector('.nome_membro'), membro.getAttribute('class').replace('membro', '').toUpperCase())
     })
 

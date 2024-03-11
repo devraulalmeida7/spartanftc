@@ -7,6 +7,9 @@
     <title>Spartan FTC</title>
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css" />
+    <!--ICONS & FONTS-->
+    <script src="https://kit.fontawesome.com/7dae200443.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/">
   </head>
   <body>
     <div id="app">
@@ -20,9 +23,9 @@
         
       <header>
         <div class="header_background"></div>
-        <img src="images/logo.png" alt="Logo da Spartan" class="logo" />
+        <img src="images/logo.png" alt="Logo da Spartan" class="logo" id="logo" />
 
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <a href="index.html" class="menu_item">Home</a>
           <a href="#" class="menu_item">Sobre</a>
           <a href="#" class="menu_item">Contato</a>
@@ -36,7 +39,7 @@
             da Spartan FTC
           </h1>
 
-          <button class="btn_principal">Contate-nos</button>
+          <button class="btn_principal" id="btn_principal" href="#contato">Contate-nos</button>
         </div>
 
         <div class="pessoas">
@@ -53,31 +56,93 @@
       <section class="equipe">
         <h2 class="titulo_secundario">Nossa Equipe</h2>
 
-        <div class="equipe__conteudo">
+        <div class="equipe_conteudo">
 
-        <p>Olá, somos a equipe SPARTAN #19192, um time de FTC da unidade SESI de
-          Sobral, Ceará, Brasil. Atualmente composta por 10 integrantes, 3
-          mentores e 1 técnico. Fomos campeões do Prêmio Bussola na temporada 2022-2023 no Festival SESI de Robótica na cidade de Brasília-DF 
-          Estamos sempre buscando melhorar e 
-          
-          a equipe sempre preza pelo bem coletivo e Gracious Professionalism</p>
+          <div class="texto_equipe_conteudo">
+            <p>Olá, somos a equipe SPARTAN #19192, um time de FTC da unidade SESI de
+            Sobral, Ceará, Brasil. Atualmente composta por 10 integrantes, 3
+            mentores e 1 técnico. Fomos campeões do Prêmio Bussola na temporada 2022-2023 no Festival SESI de Robótica na cidade de Brasília-DF 
+            Estamos sempre buscando melhorar e a equipe sempre preza pelo bem coletivo e Gracious Professionalism</p>
+          </div>
+
+        
 
         <img src="images/equipe.jpg" alt="Foto da equipe Spartan" class="equipe_imagem" width="44%" height="44%"  />
       </div>
       </section>
 
-      <section></section>
+      <section class="contato">
+        <h2 class="titulo_secundario" id="fale_conosco">Fale conosco!</h2>
+        <div class="contato_conteudo">
 
+          <!-- action="https://formsubmit.co/ftcspartansesisobral@gmail.com" -->
+
+          
+           <form class="contato_forms" id="contato" action="https://formsubmit.co/ftcspartansesisobral@gmail.com>">
+            <label for="nome">Nome*</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+  
+            <label for="telefone">Telefone*</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+  
+            <label for="mensagem">Digite a sua mensagem</label>
+            <textarea name="mensagem" id="mensagem" name="Mensagem" cols="30" rows="10" required></textarea>
+  
+            <input type="submit" id="enviar"> 
+
+            <!--Fazer ação de adicionar a classe-->
+             <div class="confirmacao " id="confirm">
+              <p><i class="fa-solid fa-check"></i> Sua mensagem foi enviada!</p>
+             </div>
+  
+          </form> 
+  
+          <article class="mapa_conteudo">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.605866113355!2d-40.36266592534871!3d-3.6768174962971716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac6cc7eff9a1d%3A0x4b72639e7b4b1fe5!2sSENAI%20Sobral!5e0!3m2!1spt-BR!2sbr!4v1703387801518!5m2!1spt-BR!2sbr"  style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </article>
+        </div>
+        
+
+      </section>
+
+
+      <section class="video">
+        <div class="video_texto">
+          <p> Esse foi o prêmio conquistado pela Spartan FTC em 2023. <br>
+            o prêmio consiste em homenagear um técnico, mentor ou membro da equipe. <br>
+            Nós escolhemos o nosso mentor Arcanjo que está sempre ajudando a equipe <br>
+            e fazendo o seu melhor!
+            <br>
+            <br>
+            Obrigado Arcanjo!
+        </p>
+        </div>
+        
+
+
+        <iframe class="iframe_video" width="560" height="315" src="https://www.youtube.com/embed/H_RsokVnnE0?si=nVAlAPRSmIbqcJG3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      </section>
+
+
+      <!--Rodapé (configurar as redes sociais para serem clicáveis)-->
       <footer class="rodape">
-        &copy; Copyright Spartan FTC 2023 
+        &copy; Copyright Spartan FTC 2023-2024 
         <br>
-        Criado e desenvolvido por Raul Almeida
+        Criado e desenvolvido por Raul Guerra
 
         <div class="rodape__redes__sociais">
-
+          <a class="rodape_link" href="https://www.instagram.com/spartan_ftc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a class="rodape_link" href="https://www.youtube.com/@equipespartanftc9625" target="_blank"><i class=""><i class="fa-brands fa-youtube"></i></i></a>
+          <a class="rodape_link" href="https://www.tiktok.com/@equipespartanftc" target="_blank"><i class=""><i class="fa-brands fa-tiktok"></i></i></a>
         </div>
       </footer>
     </div>
     <script src="./js/scroll.js" defer></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

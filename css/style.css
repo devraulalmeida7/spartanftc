@@ -49,6 +49,7 @@ header.active > .header_background {
 .logo{
     width:8.5%;
     height:8.5%;
+    cursor: pointer;
 }
 .menu {
     display: flex;
@@ -109,15 +110,17 @@ header.active > nav > .menu_item
 }
 .btn_principal {
     margin-top: 1rem;
-    width: 10%;
-    padding: 0.5rem 0;
+    width: 9%;
+    padding: 1rem 0;
+    
     background: var(--vermelho-secundario);
     border: none;
     border-radius: 5px;
     transition: 0.5s;
+    font-size: 16px;
 }
 .btn_principal:hover {
-    background: #fc2727;  
+    background: rgb(251, 37, 37);
 }
 .pessoas {
     height: 20vh;
@@ -150,11 +153,11 @@ header.active > nav > .menu_item
 }
 
 .membro{
-    width: 40%;
+    width: 40%; /*Antigamente 40%*/
     position: absolute;
     bottom: 0;
     filter: grayscale(30) brightness(0.5);
-    transition: all .3s ease-out;
+    transition: all .4s ease-out;
     transform: scale(1);
     overflow: visible;
     transform: translateX(-50%);
@@ -183,22 +186,33 @@ header.active > nav > .menu_item
 
 .lorena{
     left: 25%;
+    
 }
 
+
+/* 
 .marcos {
     left: 50%;
     transform: translateX(-50%);
+    
 }
+
+
+*/
 
 .lorena, .caio {
     z-index: 2;
+    cursor: pointer;
 }
 
 .marcos {
     z-index: 1;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.equipe__conteudo {
+.equipe_conteudo {
     display:flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -207,7 +221,76 @@ header.active > nav > .menu_item
     border-radius: 5px;
     margin: 0.5rem 1rem;
 }
+/*Contato*/
+.contato {
+    padding: 1.5rem 0;
+    width: 100%;
+}
+.contato_conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contato_mapa{
+    margin-right: 0.5rem;
+}
+.contato_forms {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    width: 50%;
+}
+.contato_forms input  {
+    width: 48%;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
 
+}
+.contato_forms textarea {
+    width: 50%;
+}
+.mapa{
+    width: auto;
+    height:auto;
+    margin-right: 2rem;
+}
+
+#enviar {
+     width: 15%;
+     border-radius: 5px;
+     border: 1px solid #000;
+}
+.confirmacao{
+    display: none;
+}
+
+.true{
+    background: #8CF8A3;
+    border: 1px solid rgb(3, 189, 3);
+    padding: 1rem;
+    width: 22%;
+    height: 10%;
+    display: block;
+}
+
+.video {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1071%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c78 C 96%2c96.6 288%2c184 480%2c171 C 672%2c158 768%2c15.8 960%2c13 C 1152%2c10.2 1344%2c128.2 1440%2c157L1440 560L0 560z' fill='rgba(220%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c377 C 57.6%2c409 172.8%2c544.2 288%2c537 C 403.2%2c529.8 460.8%2c363.6 576%2c341 C 691.2%2c318.4 748.8%2c424 864%2c424 C 979.2%2c424 1036.8%2c325.4 1152%2c341 C 1267.2%2c356.6 1382.4%2c469.8 1440%2c502L1440 560L0 560z' fill='rgba(198%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1071'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+}
+.iframe_video {
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px, rgba(27, 26, 26, 0.4) 10px 10px, rgba(0, 0, 0, 0.3) 15px 15px, rgba(0, 0, 0, 0.2) 20px 20px, rgba(0, 0, 0, 0.1) 25px 25px;
+}
+.video_texto {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*Rodapé*/
 
 
@@ -217,10 +300,119 @@ header.active > nav > .menu_item
     padding: 3rem 1rem;
     text-align: center;
 }
+.rodape_link {
+    text-decoration: none;
+    color:var(--vermelho-principal);
+    font-size: 23px;
+}
 .rodape__redes__sociais{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 }
 
+/*Responsividade*/
+
+@media screen and (max-width: 50px) {
+    
+
+    /*Elemetnos que iram desaparecer*/
+    .lorena, .caio, .marcos {
+        display: none;
+    }
+    
+    
+
+  }
+
+@media screen and (max-width: 768px) {
+    
+
+
+    /*Elemetnos que iram desaparecer*/
+    .lorena, .caio, .marcos, .contato_forms {
+        display: none;
+    }
+/*Responsividade parte principal*/
+
+    header{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+    }
+    body{
+        width: 100vw;
+    }
+    .header_background{
+        display: none;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .menu_item{
+
+    }
+    .logo{
+        width: 40%;
+        height:40%;
+        cursor: pointer;
+    }
+
+    .btn_principal {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        background: var(--vermelho-secundario);
+        border: none;
+        border-radius: 5px;
+        transition: 0.5s;
+        font-size: 16px;
+    }
+    .btn_principal:hover {
+        background: rgb(251, 37, 37);
+    }
+
+
+    
+
+/*Responsividade parte da equipe*/
+    .equipe_conteudo {
+        display:flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .texto_equipe_conteudo {
+        font-size: 12px;
+        padding: 0 1.5rem;
+    }
+
+    .equipe_imagem{
+        border-radius: 5px;
+        margin: 0.5rem 1rem;
+        width: 90%;
+    }
+    .mapa{
+        width: auto;
+    }
+    .video {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
+      
+        /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1071%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c78 C 96%2c96.6 288%2c184 480%2c171 C 672%2c158 768%2c15.8 960%2c13 C 1152%2c10.2 1344%2c128.2 1440%2c157L1440 560L0 560z' fill='rgba(220%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c377 C 57.6%2c409 172.8%2c544.2 288%2c537 C 403.2%2c529.8 460.8%2c363.6 576%2c341 C 691.2%2c318.4 748.8%2c424 864%2c424 C 979.2%2c424 1036.8%2c325.4 1152%2c341 C 1267.2%2c356.6 1382.4%2c469.8 1440%2c502L1440 560L0 560z' fill='rgba(198%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1071'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+    }
+  }
+
+
+
+  /*Efeitos no header*/
 
 @keyframes show {
 
