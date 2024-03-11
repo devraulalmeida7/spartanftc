@@ -314,19 +314,32 @@ header.active > nav > .menu_item
 
 /*Responsividade*/
 
-@media screen and (max-width: 50px) {
+@media screen and (min-width: 768px) {
     
-
     /*Elemetnos que iram desaparecer*/
-    .lorena, .caio, .marcos {
-        display: none;
+    
+    .mapa{
+        width: 30rem;
+        height: 20rem;
     }
-    
-    
+
+    .video {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 1rem;
+        margin: 0 1.5rem;
+    }
+
+    .btn_principal{
+        width: 20%;
+    }
 
   }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     
 
 
